@@ -11,18 +11,9 @@
   # Exclude non-sensitive env vars whose values (port numbers, standard hosts, etc.) appear in code naturally
   SECRETS_SCAN_OMIT_KEYS = "NODE_ENV,API_PORT,WEB_PORT,DB_PORT,REDIS_PORT,SMTP_PORT,SMTP_HOST,WEB_URL,API_URL,ANTHROPIC_MAX_TOKENS"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
 # Redirect all API calls to your backend (update BACKEND_URL in Netlify env vars)
 [[redirects]]
   from   = "/api/*"
   to     = ":BACKEND_URL/api/:splat"
   status = 200
   force  = true
-
-# SPA fallback (Next.js handles this but good to have)
-[[redirects]]
-  from   = "/*"
-  to     = "/index.html"
-  status = 200
