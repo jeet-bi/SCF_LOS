@@ -1,3 +1,5 @@
+'use client';
+
 import { useState } from 'react';
 
 export type AnchorStatus = 'ACTIVE' | 'ONBOARDING' | 'SUSPENDED' | 'CLOSED';
