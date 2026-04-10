@@ -16,14 +16,14 @@ export class StorageService {
   private readonly bucket: string;
 
   constructor(private config: ConfigService) {
-    this.bucket = config.get<string>('storage.bucket', 'los-documents');
+    this.bucket = config.getOrThrow<string>('storage.bucket');
 
     this.s3 = new S3Client({
-      endpoint: config.get<string>('storage.endpoint', 'http://localhost:9000'),
-      region: config.get<string>('storage.region', 'ap-south-1'),
+      endpoint: config.getOrThrow<string>('storage.endpoint'),
+      region: config.getOrThrow<string>('storage.region'),
       credentials: {
-        accessKeyId: config.get<string>('storage.accessKey', 'minio_user'),
-        secretAccessKey: config.get<string>('storage.secretKey', 'minio_password'),
+        accessKeyId: config.getOrThrow<string>('storage.accessKey'),
+        secretAccessKey: config.getOrThrow<string>('storage.secretKey'),
       },
       forcePathStyle: true,
     });

@@ -9,7 +9,7 @@ export class KarzaService {
   private readonly xKarzaKey: string;
 
   constructor(private config: ConfigService) {
-    this.baseUrl = config.get<string>('karza.baseUrl', 'https://testapi.karza.in');
+    this.baseUrl = config.getOrThrow<string>('karza.baseUrl');
     this.apiKey = config.get<string>('karza.apiKey', '');
     this.xKarzaKey = config.get<string>('karza.xKarzaKey', '');
   }

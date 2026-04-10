@@ -13,8 +13,8 @@ export class AiService {
     this.client = new Anthropic({
       apiKey: config.get('anthropic.apiKey'),
     });
-    this.model = config.get('anthropic.model') || 'claude-sonnet-4-6';
-    this.maxTokens = config.get('anthropic.maxTokens') || 8192;
+    this.model = config.getOrThrow<string>('anthropic.model');
+    this.maxTokens = config.get<number>('anthropic.maxTokens') || 8192;
   }
 
   async complete(prompt: string, systemPrompt?: string): Promise<string> {

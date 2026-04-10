@@ -148,7 +148,7 @@ function CamPanel({ cam, loanAmount }: { cam: CamReport; loanAmount: number }) {
               <Sparkles className="h-3.5 w-3.5 text-indigo-600" />
             </div>
             <span className="text-sm font-semibold text-slate-900">AI Risk Summary</span>
-            <span className="text-[10px] bg-indigo-100 text-indigo-600 px-1.5 py-0.5 rounded font-bold">claude-sonnet-4-6</span>
+            <span className="text-[10px] bg-indigo-100 text-indigo-600 px-1.5 py-0.5 rounded font-bold">Claude AI</span>
           </div>
           <ChevronRight className={`h-4 w-4 text-slate-400 transition-transform ${showAI ? 'rotate-90' : ''}`} />
         </button>
@@ -297,7 +297,7 @@ function UWPanel({ uw }: { uw: UnderwritingReport }) {
               <Sparkles className="h-3.5 w-3.5 text-indigo-600" />
             </div>
             <span className="text-sm font-semibold text-slate-900">AI Underwriting Narrative</span>
-            <span className="text-[10px] bg-indigo-100 text-indigo-600 px-1.5 py-0.5 rounded font-bold">claude-sonnet-4-6</span>
+            <span className="text-[10px] bg-indigo-100 text-indigo-600 px-1.5 py-0.5 rounded font-bold">Claude AI</span>
           </div>
           <ChevronRight className={`h-4 w-4 text-slate-400 transition-transform ${showNarrative ? 'rotate-90' : ''}`} />
         </button>
