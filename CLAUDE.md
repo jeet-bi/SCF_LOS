@@ -9,7 +9,7 @@ Product: Working capital loans, dealer financing, invoice discounting.
 - **Monorepo**: Turborepo
 - **Backend**: NestJS + TypeORM + PostgreSQL + BullMQ + Redis
 - **Frontend**: Next.js 14 (App Router) + Tailwind CSS + shadcn/ui
-- **AI**: Anthropic Claude (claude-sonnet-4-6) for KYC, underwriting report, CAM generation
+- **AI**: Anthropic Claude (see `AI_MODEL` in `.env`) for KYC, underwriting report, CAM generation
 - **Storage**: AWS S3 for documents
 - **Integrations**: Karza (KYC), Perfios (bank statement), CIBIL (bureau), Digio (eSign/eNACH)
 
